@@ -1,0 +1,216 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+header {
+	width: 80%;
+	margin: 20px auto;
+	font-size: 10px;
+}
+
+
+.judul-web {
+	font-family: cursive;
+	margin-bottom: 2px;
+	font-size: 3em;
+}
+
+.deskripsi {
+	font-family: monospace;
+	margin-top: 2px;
+}
+
+.tombol {
+	display: none;
+}
+
+
+nav ul {
+	
+	margin: 0px auto;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li{
+	min-width: 15%;
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li a {
+	color: black;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	text-decoration: underline;
+	color: #5AB4F9;
+}
+
+main {
+	margin-top: 20px;
+
+}
+
+.text-tengah {
+	text-align: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	min-height: 300px;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+	
+
+}
+
+.content img.foto {
+
+	display: block; /* karena defaulnya inline mesit diubah ke block baru bisa margin auto */
+	margin: 0 auto;
+	margin-top: 20px; 
+	width: 90px;
+	height: 92px;
+	border-radius: 75px;
+	box-shadow: 0px 2px 5px #e51e63;
+
+}
+
+.content .halo {
+	text-align: center;
+	margin-top: 10px;
+	text-shadow: 1px 1px 1px #FB9C9C;
+}
+
+.content .sapa{
+	text-align: justify;
+}
+
+.judul-post {
+	text-decoration: underline;
+	margin-bottom:8px;
+
+}
+
+.content .isi{
+	font-family: serif;
+	text-align: justify;
+	font-size: 18px;
+}
+
+.content .terbit{
+	font-size: 0.8em;
+}
+
+.content p a {
+	color: black;
+	margin-bottom: 2px;
+}
+
+.list-post a {
+	display: block;
+	margin-bottom: 5px;
+	color : #545151;
+}
+
+.list-post a:hover{
+	color: #90B7F8;
+}
+
+form div {
+	margin: 5px;
+}
+
+.kontak label {
+	display: inline-block; /*agar punya width dan bisa rata*/
+	width : 175px;
+  vertical-align: top;
+}
+
+.kontak input[type=text] {
+	width: 68%;
+	padding: 6px;
+	font-family: monospace;
+	
+}
+
+.kontak input[type=text]:focus {
+  border: 3px solid #A883F4;
+}
+
+.kontak textarea {
+	width: 70%;
+	padding: 10px;
+}
+
+.kontak button {
+	display: block;
+	margin : 0 auto;
+	background-color: #90C4F9;
+	padding: 5px;
+	border-radius: 20px;
+}	
+
+footer{
+	font-size: 12px;
+}
+
+@media screen and (max-width: 480px) { 
+
+	button.tombol{
+
+		background-color: transparent;
+	}
+
+	.tombol {
+		display: block;
+		border: none;
+		width: 250px;
+		margin: 0 auto;
+		padding: 4px;
+	}
+
+	button.tombol span {
+		font-size: 15px
+	}
+
+	nav {
+		display: none;
+
+	}
+
+	.menu-tampil{
+		width: 250px;
+		left: 0;
+	}
+
+
+	nav ul {
+		background-color: white;
+		flex-direction: column;
+	}
+
+	nav ul li {
+		padding: 4px;
+		margin-bottom: 3px;
+	}
+
+	.kontak label {
+		margin : 10 0 2 0;
+	}
+
+	.kontak input[type=text] {
+	width: 100%;
+	}
+
+	.kontak textarea {
+		width: 100%;
+	} 
+	
+}
