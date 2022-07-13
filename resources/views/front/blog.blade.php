@@ -1,9 +1,5 @@
 @extends('layouts.master-layouts')
 
-@section('body')
-    <body class="gradient-topbar topbar-dark boxed-layout center-menu ">
-@endsection
-
 @section('content')
 
         <!-- start page title -->
@@ -47,16 +43,9 @@
                             <div class="card-body text-secondary">
                                 <a href="/{{$item->url_seo}}"><h5 class="card-title">{{ ucwords ( $item->title ) }}</h5></a>
                                 <p class="card-text">
-                                    @if($item->modified) 
-                                    <p class="card-text">
-                                        <small class="">terakhir diedit : {{ date('d F Y, H:i', strtotime($item->modified)) }}</small>
-                                    </p>
-                                       
-                                    @else
                                     <p class="card-text">
                                         <small class="">terbit : {{ date('d F Y, H:i', strtotime($item->created)) }}</small>
                                     </p>
-                                    @endif
                                 </p>
                             </div>
                         </div> <!-- end card-box-->

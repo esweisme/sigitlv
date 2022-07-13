@@ -1,9 +1,4 @@
 @extends('layouts.master-layouts')
-
-@section('body')
-    <body class="gradient-topbar topbar-dark boxed-layout center-menu ">
-@endsection
-
 @section('content')
 
         <!-- start page title -->

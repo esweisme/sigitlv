@@ -1,9 +1,5 @@
 @extends('layouts.master-layouts')
 
-@section('body')
-    <body class="gradient-topbar topbar-dark boxed-layout center-menu ">
-@endsection
-
 @section('content')
 
         <!-- start page title -->
@@ -21,14 +17,14 @@
     <div class="col-lg-12 col-xl-12">
         <div class="card-box text-center">
             <img src="images/sigit2.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                alt="profile-image">
+                alt="sigit wahyudi tik ubt">
     
-            <h4 class="mb-0">Sigit Wahyudi</h4>
+            <h4 class="mb-0"> Sigit Wahyudi</h4>
             <p class="text-muted">web programmer</p>
     
             <div class="text-left mt-3">
-                <h4 class="font-13 text-uppercase">&#128516;Hi,</h4>
-                <p class="text-muted font-13 mb-3">
+                <h4>&#128516;Hi,</h4>
+                <p>
                     Otak saya selalu berputar ketika menemukan ide atau hal baru, daripada saya hanya memikirkannya, jauh lebih baik untuk mencoba mewujudkan. Salah satunya adalah web ini. Selamat datang. <br><br>Tulisan saya di sini belum sebaik tulisan profesional. Namun, jika menunggu sempurna saya tidak akan pernah berbagi. Saya memilih memulai. Saya yakin tulisan dan apa saya bagikan akan di lihat oleh orang dan pada saat yang tepat. Di sini kamu bisa membaca blog atau melihat project saya kedepan. <br><br> Tujuan membuat web ini salah tiganya untuk terus belajar membangun aplikasi, membagikan pengalaman serta catatan kerjaan juga mungkin mengutarakan pikiran.
                 </p>
             </div>

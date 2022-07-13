@@ -54,6 +54,20 @@ body {
   overflow-x: hidden;
 }
 
+.titlehead {
+   text-align: center;
+   color: gainsboro ;
+}
+
+.titleweb{
+  font-size: 28px;
+}
+
+.taglineweb {
+  font: 22px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 @media (min-width: 1200px) {
   .container-fluid {
     max-width: 90%;
@@ -154,7 +168,7 @@ body {
 }
 
 #topnav .topbar-menu {
-  margin-top: 70px;
+  /* margin-top: 90px; */
 }
 
 .navigation-menu {
@@ -192,6 +206,17 @@ body {
 /*
 Responsive Menu
 */
+
+@media (max-width : 400px){
+
+  .titleweb {
+    font-size: 25px;
+  }
+  .taglineweb {
+    font-size: 15px;
+  }
+
+}
 
 @media (min-width: 992px) {
   .navigation-menu > li > a:hover,
@@ -500,7 +525,7 @@ Responsive Menu
   }
 
   .center-menu .wrapper {
-    padding: 150px 12px 0 12px;
+    padding: 175px 12px 0 12px;
   }
 }
 
@@ -590,13 +615,13 @@ Responsive Menu
 }
 
 .navbar-custom {
-  background-color: #ffffff;
-  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
-  position: fixed;
+  /* background-color: #ffffff;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15); */
+  /* position: fixed; */
   left: 0;
   right: 0;
-  height: 70px;
-  z-index: 100;
+  /* height: 70px;
+  z-index: 100; */
   padding: 0 12px;
   /* Search */
 }

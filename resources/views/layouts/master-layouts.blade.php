@@ -14,12 +14,12 @@
 
     </head>
 
-    @yield('body')
+    <body class="gradient-topbar topbar-dark center-menu ">
 
         <!-- Navigation Bar-->
         <header id="topnav">
-      @include('layouts.topbar')
-      @include('layouts.nav-horizontal')
+            @include('layouts.topbar')
+            @include('layouts.nav-horizontal')
         </header>
         <!-- End Navigation Bar-->
 
