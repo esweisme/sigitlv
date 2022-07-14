@@ -368,7 +368,7 @@ Responsive Menu
 
 @media (max-width: 991px) {
   .wrapper {
-    padding-top: 70px;
+    padding-top: 100px;
   }
 
   #topnav .navigation-menu {
