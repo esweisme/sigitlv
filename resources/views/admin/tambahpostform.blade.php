@@ -3,47 +3,42 @@
 
 @section('css')
 
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/rzu6cols2smrsme52bpe6c544244vyrd0z2gsnuxv6x2x5zy/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   
-<script>tinymce.init({
-  selector: 'textarea#summernote-editor', // Replace this CSS selector to match the placeholder element for TinyMCE
-  plugins: 'code table lists image',
-  toolbar: 'undo redo | formatselect| bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table',
+<script>
+  tinymce.init({
+    selector: 'textarea#summernote-editor', // Replace this CSS selector to match the placeholder element for TinyMCE
+    menubar: 'edit insert format',
+    plugins: 'code table lists image link codesample',
+    toolbar: 'undo redo | formatselect| bold underline italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code codesample | table | link',
 
-  image_title: true,
-  automatic_uploads: true,
-  images_upload_url: '/uploadimgtiny',
-  file_picker_types: 'image',
-  file_picker_callback: function(cb, value, meta) {
-      var input = document.createElement('input');
-      input.setAttribute('type', 'file');
-      input.setAttribute('accept', 'image/*');
-      input.onchange = function() {
-          var file = this.files[0];
+    image_title: true,
+    automatic_uploads: true,
+    images_upload_url: '/uploadimgtiny',
+    file_picker_types: 'image',
+    file_picker_callback: function(cb, value, meta) {
+        var input = document.createElement('input');
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+        input.onchange = function() {
+            var file = this.files[0];
 
-          var reader = new FileReader();
-          reader.readAsDataURL(file);
-          reader.onload = function () {
-              var id = 'blobid' + (new Date()).getTime();
-              var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-              var base64 = reader.result.split(',')[1];
-              var blobInfo = blobCache.create(id, file, base64);
-              blobCache.add(blobInfo);
-              cb(blobInfo.blobUri(), { title: file.name });
-          };
-      };
-      input.click();
-  }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                var id = 'blobid' + (new Date()).getTime();
+                var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                var base64 = reader.result.split(',')[1];
+                var blobInfo = blobCache.create(id, file, base64);
+                blobCache.add(blobInfo);
+                cb(blobInfo.blobUri(), { title: file.name });
+            };
+        };
+        input.click();
+    }
 
-});</script>
-
-<!-- Plugins css -->
-<link href="{{ URL::asset('assets/libs/jquery-nice-select/jquery-nice-select.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{ URL::asset('assets/libs/switchery/switchery.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{ URL::asset('assets/libs/multiselect/multiselect.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{ URL::asset('assets/libs/select2/select2.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{ URL::asset('assets/libs/bootstrap-select/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{ URL::asset('assets/libs/bootstrap-touchspin/bootstrap-touchspin.min.css')}}" rel="stylesheet" type="text/css" />
+  });
+</script>
 
 
 @endsection
@@ -106,27 +101,5 @@
 
 @endsection
 @section('script')
-
-        <script src="{{ URL::asset('assets/libs/jquery-nice-select/jquery-nice-select.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/switchery/switchery.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/multiselect/multiselect.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/select2/select2.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/jquery-mockjax/jquery-mockjax.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/autocomplete/autocomplete.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/bootstrap-select/bootstrap-select.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/bootstrap-touchspin/bootstrap-touchspin.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js')}}"></script>
-
-        <!-- Init js-->
-        <script src="{{ URL::asset('assets/js/pages/form-advanced.init.js')}}"></script>
-
-        <!-- Dashboard init JS -->
-        <script src="{{ URL::asset('assets/js/pages/dashboard-3.init.js')}}"></script>
-
-        <!-- Summernote js -->
-        {{-- <script src="{{ URL::asset('assets/libs/summernote/summernote.min.js')}}"></script> --}}
-
-        <!-- Init js -->
-        {{-- <script src="{{ URL::asset('assets/js/pages/form-summernote.init.js')}}"></script> --}}
 
 @endsection

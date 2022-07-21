@@ -36,9 +36,6 @@
 
         @yield('css')
 
-        
-
-
     </head>
 
     <body class="gradient-topbar topbar-dark center-menu ">
