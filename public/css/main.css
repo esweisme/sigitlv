@@ -1,0 +1,55 @@
+*, body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: large;
+    background-color: rgb(248, 248, 248);
+}
+
+H1, H2, H3, H4, H5, h6 {
+    font-family: 'Cherry Swash', cursive;
+}
+
+a {
+    text-decoration: none;
+    background: linear-gradient(180deg,transparent 0,transparent 80%,#fbf36d 0,#FCE120);
+    color: #454b4e;
+    transition: background .5 ease;
+}
+
+.wrapper-home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-home {
+    margin: auto;
+    padding: 10px 15px;;
+    width: 35%;
+    min-height: 350px;
+}
+
+.salam-home {
+    text-align: justify;
+    text-align-last:left ;
+}
+
+.wrapper-main {
+    width: 85%;
+    min-height: 300px;
+}
+
+.card-main {
+
+}
+
+@media only screen and (max-width: 750px) {
+    .card-home {
+        width: 55%;
+    }
+  }

@@ -25,7 +25,7 @@ class PostController extends Controller
             ;
         }
 
-        $posts = $post->orderBy('created', 'desc')->where('Kategori_id',1)->paginate()->appends(['q' => $request->q]);
+        $posts = $post->orderBy('created', 'desc')->where('Kategori_id',1)->paginate(9)->appends(['q' => $request->q]);
         $meta = [
             "title" => "Blog Sigit Wahyudi",
             "desc" => "blog dan tulisan Sigit Wahyudi"

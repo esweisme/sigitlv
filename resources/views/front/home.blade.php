@@ -1,49 +1,22 @@
-@extends('layouts.master-layouts')
+@extends('front.layout')
 
 @section('content')
 
-        <!-- start page title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box">
-                    <h4 class="page-title">Home</h4>
-                </div>
-            </div>
+    <div class="wrapper-home">
+
+        <div class="card-home">
+            <h3>Selamat datang, &#128516;</h3><br>
+            <p class="salam-home">Tulisan saya belum sebaik tulisan profesional. Namun, jika menunggu sempurna saya tidak akan pernah berbagi. Saya memilih memulai. Saya yakin tulisan saya akan dibaca oleh orang dan pada saat yang tepat. Disini kamu bisa melihat beberapa tautan dari aplikasi, website, blog, sosial media atau apapun itu yang saya kelola secara pribadi. Tautan saya letakkan di bagian menu di web ini.</p><br>
+            <p class="salam-home">jika nanti domain yang saya miliki expired ( mati ) dengan alasan apapun itu, kamu tetap bisa melihat laman ini di <a href="https://esweisme.github.io/hub" target="_blank">https://esweisme.github.io/hub</a></p><br>
+            <a href="/blog">blog</a> | <a href="/catatan">catatan</a> | <a href="/">kontak</a>
+
+
         </div>
-        <!-- end page title -->
 
-<div class="row">
+    </div>
 
-    <div class="col-lg-12 col-xl-12">
-        <div class="card-box text-center">
-            <img src="images/sigit2.jpg" class="rounded-circle avatar-lg img-thumbnail"
-                alt="sigit wahyudi tik ubt">
-    
-            <h4 class="mb-0"> Sigit Wahyudi</h4>
-            <p class="text-muted">web programmer</p>
-    
-            <div class="text-left mt-3">
-                <h4>&#128516;Hi,</h4>
-                <p>
-                    Otak saya selalu berputar ketika menemukan ide atau hal baru, daripada saya hanya memikirkannya, jauh lebih baik untuk mencoba mewujudkan. Salah satunya adalah web ini. Selamat datang. <br><br>Tulisan saya di sini belum sebaik tulisan profesional. Namun, jika menunggu sempurna saya tidak akan pernah berbagi. Saya memilih memulai. Saya yakin tulisan dan apa saya bagikan akan di lihat oleh orang dan pada saat yang tepat. Di sini kamu bisa membaca blog atau melihat project saya kedepan. <br><br> Tujuan membuat web ini salah tiganya untuk terus belajar membangun aplikasi, membagikan pengalaman serta catatan kerjaan juga mungkin mengutarakan pikiran.
-                </p>
-            </div>
-        </div> <!-- end card-box -->
-    
-    </div> <!-- end col-->
+    @endsection
 
-</div>
 
-        
-@endsection
-
-@section('script')
-
-        <!-- Plugins js -->
-        <script src="{{ URL::asset('assets/libs/morris-js/morris-js.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/libs/raphael/raphael.min.js')}}"></script>
-
-        <!-- Dashboard init-->
-        <script src="{{ URL::asset('assets/js/pages/dashboard-4.init.js')}}"></script>
-
-@endsection
+</body>
+</html>
